@@ -10,19 +10,14 @@ import java.util.StringTokenizer;
 public class Quiz02 {
 	public static void main(String args[]) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-		int count = 1;
-		while (true) {
-			if (count > 5) {
-				break;
-			}
-			StringTokenizer st = new StringTokenizer(br.readLine());
-			int A = Integer.parseInt(st.nextToken());
-			int B = Integer.parseInt(st.nextToken());
-			bw.write(A + B + "\n");
-			count++;
+		StringBuilder sb = new StringBuilder();
+		String st; 
+		
+		while ((st = br.readLine()) != null) {	
+			int A = st.charAt(0) - 48;
+			int B = st.charAt(2) - 48;
+			sb.append(A+B).append("\n");
 		}
-		bw.flush();
-		bw.close();
+		System.out.println(sb);
 	}
 }
