@@ -10,12 +10,14 @@ public class Quiz04 {
 		int[] arr = new int[10];
 		int[] countArr = new int[10];
 		int count = 1;
-		for (int i = 0; i < arr.length; i++) {
+		int i;
+		int j;
+		for (i = 0; i < arr.length; i++) {
 			arr[i] = (Integer.parseInt(br.readLine()) % 42);			
-		}
-		
-		for (int j = 0; j < i; j++) {
+		}		
+		for (j = 0; j < i; j++) {
 			if (arr[i] == arr[j]) {
+				}
 			}
 		}
 		/*
@@ -24,4 +26,3 @@ public class Quiz04 {
 		 * System.out.println(countArr[j - 1]); } System.out.println(countArr.length);
 		 */
 	}
-}
