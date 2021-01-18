@@ -31,9 +31,6 @@ public class Quiz07 {
 			sum = sum / t;			
 			System.out.println(sum);
 		}
-		
-		//bw.write(String.format("%.3f",sum));
-
 		bw.flush();
 		bw.close();
 	}
