@@ -25,6 +25,7 @@ public class Quiz07 {
 				sum += score[j];
 				if (j == (t - 1)) {
 					sum = Math.round(sum / t);
+					System.out.println(sum);
 				}
 			}
 		}
