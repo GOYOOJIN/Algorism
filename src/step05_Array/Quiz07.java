@@ -15,11 +15,11 @@ public class Quiz07 {
 		int i;
 		int j;
 		int t;
-		int sum = 0;
+		double sum = 0.0;
 		int count = 0;
 
 		int[] score;
-		int[] sumArr;
+		double[] sumArr;
 
 		for (i = 0; i < C; i++) {
 			StringTokenizer st = new StringTokenizer(br.readLine());
@@ -29,8 +29,8 @@ public class Quiz07 {
 				score[j] = Integer.parseInt(st.nextToken());
 				sum += score[j];
 				if (j == (t - 1)) {
-					sum = sum / t;
-					sumArr = new int[t];
+					sum = Math.round(sum / t);
+					sumArr = new double[t];
 					sumArr[j] = sum;
 					System.out.println(sumArr[j]);
 				}
