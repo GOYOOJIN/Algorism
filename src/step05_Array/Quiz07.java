@@ -17,8 +17,9 @@ public class Quiz07 {
 		int t;
 		int sum = 0;
 		int count = 0;
-		double avg = 0.0;
-		int[] score; 
+
+		int[] score;
+		int[] sumArr;
 
 		for (i = 0; i < C; i++) {
 			StringTokenizer st = new StringTokenizer(br.readLine());
@@ -27,11 +28,14 @@ public class Quiz07 {
 			for (j = 0; j < t; j++) {
 				score[j] = Integer.parseInt(st.nextToken());
 				sum += score[j];
+				if (j == (t - 1)) {
+					sum = sum / t;
+					sumArr = new int[t];
+					sumArr[j] = sum;
+					System.out.println(sumArr[j]);
+				}
 			}
-			sum = sum / t;			
-			System.out.println(sum);
-		}
-		bw.flush();
-		bw.close();
+		}		
+		
 	}
 }
