@@ -1,34 +1,35 @@
 package step05_Array;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.StringTokenizer;
+import java.util.Scanner;
 
 public class Quiz06 {
 	public static void main(String args[]) throws IOException {
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-		int N = Integer.parseInt(br.readLine());
-		String OX = "";
-		int[] countArr = new int[N];
-		int count = 0;
-		String[] arr = new String[OX.length()];
-		for (int i = 0; i < N; i++) {
-			StringTokenizer st = new StringTokenizer(br.readLine());
-			OX = br.readLine();
-			arr = OX.split("");
-			for (int j = 0; j < OX.length() + 1; j++) {
-				if (arr[j].equals("O")) {
-					count = 1;
-				}
-				if (arr[j].equals(arr[j + 1]) && arr[j].equals("O")) {
-					count += 1;
-					countArr[i] = count;
+		Scanner scan = new Scanner(System.in);
+
+		String arr[] = new String[scan.nextInt()];
+
+		for (int i = 0; i < arr.length; i++) {
+			arr[i] = scan.next();
+		}
+
+		scan.close();
+
+		for (int i = 0; i < arr.length; i++) {
+			int count = 0; // 연속횟수
+			int sum = 0; // 누적 합산
+			for (int j = 0; j < arr[i].length(); j++) {
+
+				if (arr[i].charAt(j) == 'O') {
+					count++;
 				} else {
-					count = countArr[i];
+					count = 0;
 				}
+
+				sum += count;
 			}
+			System.out.println(sum);
 		}
 
 	}
