@@ -12,23 +12,16 @@ public class Quiz07 {
 		int C = Integer.parseInt(br.readLine());
 		int i;
 		int j;
-		int t;
-		double sum = 0.0;
-		int[] score;
+		
+		String score = "";	
 
 		for (i = 0; i < C; i++) {
-			StringTokenizer st = new StringTokenizer(br.readLine());
-			t = Integer.parseInt(st.nextToken());
-			score = new int[t];
-			for (j = 0; j < t; j++) {
-				score[j] = Integer.parseInt(st.nextToken());
-				sum += score[j];
-				if (j == (t - 1)) {
-					sum = Math.round(sum / t);
-					System.out.println(sum);
-				}
+			score = br.readLine();	
+			String[] scoreArr = new String[C];
+			for(j = 0; j < score.length(); j++) {
+				
 			}
-		}
+		}		
 
 	}
 }
