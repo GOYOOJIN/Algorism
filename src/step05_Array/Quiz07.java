@@ -17,9 +17,10 @@ public class Quiz07 {
 
 		for (i = 0; i < C; i++) {
 			score = br.readLine();	
-			String[] scoreArr = new String[C];
+			String[] scoreArr = new String[C];	
+			scoreArr[i] = score;
 			for(j = 0; j < score.length(); j++) {
-				
+				scoreArr[i].split("");
 			}
 		}		
 
